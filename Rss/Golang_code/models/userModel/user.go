@@ -1,8 +1,8 @@
 package userModel
 
 import (
-	"DigitalLibrary/dao/userDao"
-	"DigitalLibrary/types/users"
+	"RSs/dao/userDao"
+	"RSs/types/users"
 	"errors"
 )
 

@@ -1,11 +1,10 @@
-module DigitalLibrary
+module RSs
 
 go 1.12
 
 replace github.com/hashicorp/consul v1.4.2 => github.com/hashicorp/consul/api v1.3.0
 
 require (
-	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/armon/go-metrics v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-20190212144455-93d5ec2c7f76 // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
@@ -16,6 +15,7 @@ require (
 	github.com/go-xorm/xorm v0.7.9
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/groupcache v0.0.0-20190129154638-5b532d6fd5ef // indirect
+	github.com/golang/protobuf v1.3.2
 	github.com/google/go-cmp v0.3.1 // indirect
 	github.com/google/uuid v1.1.1 // indirect
 	github.com/gorilla/websocket v1.4.0 // indirect
@@ -40,5 +40,5 @@ require (
 	golang.org/x/crypto v0.0.0-20191002192127-34f69633bfdc // indirect
 	golang.org/x/net v0.0.0-20191003171128-d98b1b443823 // indirect
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0 // indirect
-	google.golang.org/grpc v1.25.1 // indirect
+	google.golang.org/grpc v1.25.1
 )

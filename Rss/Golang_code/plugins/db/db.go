@@ -1,7 +1,7 @@
 package db
 
 import (
-	"DigitalLibrary/common"
+	"RSs/common"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
 	"strconv"

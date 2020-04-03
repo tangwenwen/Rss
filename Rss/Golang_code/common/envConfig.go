@@ -6,9 +6,9 @@ const (
 	EccdPort = 2379
 
 	//mysql Config
-	MysqlHost     = "114.55.100.116"
+	MysqlHost     = "127.0.0.1"
 	MysqlPort     = 3306
-	MysqlDBName   = "digitalLibrary"
+	MysqlDBName   = "RSs"
 	MysqlUserName = "root"
 	MysqlPassword = "123456"
 )

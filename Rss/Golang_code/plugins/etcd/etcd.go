@@ -1,7 +1,7 @@
 package etcd
 
 import (
-	"DigitalLibrary/plugins/logs"
+	"RSs/plugins/logs"
 	"context"
 	"errors"
 	"strings"

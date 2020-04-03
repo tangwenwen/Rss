@@ -1,9 +1,9 @@
 package userDao
 
 import (
-	"DigitalLibrary/plugins/db"
-	"DigitalLibrary/plugins/etcd"
-	"DigitalLibrary/types/users"
+	"RSs/plugins/db"
+	"RSs/plugins/etcd"
+	"RSs/types/users"
 	"encoding/json"
 	"errors"
 	"fmt"

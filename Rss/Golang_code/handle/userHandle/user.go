@@ -1,8 +1,8 @@
 package userHandle
 
 import (
-	"DigitalLibrary/models/userModel"
-	"DigitalLibrary/types"
+	"RSs/models/userModel"
+	"RSs/types"
 	"encoding/json"
 	"github.com/emicklei/go-restful"
 	"io/ioutil"
@@ -55,4 +55,21 @@ func (e *User) Logout(req *restful.Request, rsp *restful.Response) {
 	} else {
 		types.RspSucRestData(rsp, "", "ok")
 	}
+}
+
+
+
+func (e *User) AddUser(req *restful.Request, rsp *restful.Response) {
+
+	defer func() {
+		if e := recover(); e != nil {
+			types.RspFailRestData(rsp, e.(error).Error())
+		}
+	}()
+	//err := userModel.Logout(userToken)
+	//if err != nil {
+	//	panic(err)
+	//} else {
+	//	types.RspSucRestData(rsp, "", "ok")
+	//}
 }

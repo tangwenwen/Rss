@@ -68,7 +68,7 @@ func CheckPassword(username, password string) (int, error) {
 	if err != nil {
 		return -1, err
 	}
-	sql := fmt.Sprintf("select password,user_type from users where username = '%s'", username)
+	sql := fmt.Sprintf("select password,user_type from users where user_name = '%s'", username)
 	result, err := orm.QueryString(sql)
 	if err != nil {
 		return -1, err

@@ -42,6 +42,8 @@ func usersRouterConf() {
 
 	methodPath = "addUser"
 	ws.Route(ws.POST(rootPath + methodPath).To(user.AddUser))
+	methodPath = "get_info"
+	ws.Route(ws.GET(rootPath + methodPath).To(user.GetInfo))
 
 	methodPath = "logout"
 	ws.Route(ws.GET(rootPath + methodPath).To(user.Logout).Filter(auth.TokenFilter))

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package RecommendPro;
+//python -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. recommed_rpc.proto
+service Recommend {
+    // Sends a greeting
+    rpc Recommend (RecommendReq) returns (RecommendReply) {}
+}
+
+message RecommendReq {
+    int32 userId = 1;
+}
+
+
+message RecommendReply {
+    repeated  RecommendItem recommendItem = 1;
+}
+
+message RecommendItem{
+    int32 moiveId = 1;
+    float rating = 2;
+}

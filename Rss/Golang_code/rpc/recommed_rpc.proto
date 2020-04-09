@@ -1,0 +1,26 @@
+
+//protoc --go_out=plugins=grpc:. recommed_rpc.proto
+
+
+syntax = "proto3";
+
+package RecommendPro;
+
+service Recommend {
+    // Sends a greeting
+    rpc Recommend (RecommendReq) returns (RecommendReply) {}
+}
+
+message RecommendReq {
+    int32 userId = 1;
+}
+
+
+message RecommendReply {
+    repeated  RecommendItem recommendItem = 1;
+}
+
+message RecommendItem{
+    int32 moiveId = 1;
+    float rating = 2;
+}

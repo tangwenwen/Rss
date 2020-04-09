@@ -2,7 +2,9 @@ package userModel
 
 import (
 	"RSs/dao/userDao"
+	"RSs/plugins/etcd"
 	"RSs/types/users"
+	"encoding/json"
 	"errors"
 )
 
@@ -34,4 +36,16 @@ func Logout(token string)error{
 		return err
 	}
 	return nil
+}
+
+func GetInfo(token string) (*usersType.GetInfoResp,error){
+	userInfo := new(usersType.GetInfoResp)
+	data,status,err:=etcd.EtcdGet(etcd.ETCDROOT+"/"+token)
+	if err!=nil{
+		return userInfo,err
+	}
+	if status!=1{
+		json.Unmarshal([]byte(data),userInfo)
+	}
+	return userInfo,nil
 }

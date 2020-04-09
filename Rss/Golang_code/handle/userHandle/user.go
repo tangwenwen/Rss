@@ -20,7 +20,7 @@ func (e *User) Login(req *restful.Request, rsp *restful.Response) {
 	}()
 
 	type UserCredentials struct {
-		Username string `json:"username"`
+		Username string `json:"userName"`
 		Password string `json:"password"`
 	}
 	reqData, err := ioutil.ReadAll(req.Request.Body)
@@ -72,4 +72,24 @@ func (e *User) AddUser(req *restful.Request, rsp *restful.Response) {
 	//} else {
 	//	types.RspSucRestData(rsp, "", "ok")
 	//}
+}
+
+
+func (e *User) GetInfo(req *restful.Request, rsp *restful.Response) {
+
+	defer func() {
+		if e := recover(); e != nil {
+			types.RspFailRestData(rsp, e.(error).Error())
+		}
+	}()
+	token := req.Request.URL.Query().Get("token")
+	data, err := userModel.GetInfo(token)
+	if err != nil {
+		rsp.Header().Add("Content-Type", "application/json")
+		types.ResponseFailHttpData(rsp, err.Error())
+	} else {
+		rsp.Header().Add("Content-Type", "application/json")
+		types.ResponseSuccessHttpData(rsp, data)
+	}
+
 }

@@ -1,5 +1,5 @@
 <template>
-  <Form ref="loginForm" :model="form" :rules="rules" @keydown.enter.native="handleSubmit">
+  <Form ref="loginForm" :model="form" :rules="rules" @keydown.enter.native="handleSubmit" >
     <FormItem prop="userName">
       <Input v-model="form.userName" placeholder="请输入用户名">
         <span slot="prepend">
@@ -16,6 +16,9 @@
     </FormItem>
     <FormItem>
       <Button @click="handleSubmit" type="primary" long>登录</Button>
+    </FormItem>
+    <FormItem>
+      <Button @click="handleReg" type="primary" long>注册</Button>
     </FormItem>
   </Form>
 </template>
@@ -43,8 +46,8 @@ export default {
   data () {
     return {
       form: {
-        userName: 'super_admin',
-        password: ''
+        userName: 'admin',
+        password: 'admin'
       }
     }
   },
@@ -56,7 +59,8 @@ export default {
       }
     }
   },
-  methods: {
+
+methods: {
     handleSubmit () {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
@@ -66,6 +70,11 @@ export default {
           })
         }
       })
+    },
+    handleReg(){
+      this.$router.push({
+            name: this.$config.homeName
+          })
     }
   }
 }

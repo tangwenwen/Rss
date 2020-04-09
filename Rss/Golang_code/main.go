@@ -11,7 +11,6 @@ import (
 	"fmt"
 	"github.com/micro/go-web"
 	"google.golang.org/grpc"
-	"os"
 	"sync"
 	"time"
 )
@@ -54,18 +53,14 @@ func rpc(){
 		logs.Error("did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := pb.NewGreeterClient(conn)
+	c := pb.NewRecommendClient(conn)
 
 	// Contact the server and print out its response.
-	name := "defaultName"
-	if len(os.Args) > 1 {
-		name = os.Args[1]
-	}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*180)
 	defer cancel()
-	r, err := c.SayHello(ctx, &pb.HelloRequest{Name: name})
+	r, err := c.Recommend(ctx, &pb.RecommendReq{UserId: 1})
 	if err != nil {
 		logs.Error("could not greet: %v", err)
 	}
-	logs.Info("Greeting: ", r.Message)
+	logs.Info("recommendItem: ", r.RecommendItem)
 }

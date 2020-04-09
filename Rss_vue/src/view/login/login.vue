@@ -8,7 +8,9 @@
       <Card icon="log-in" title="欢迎登录" :bordered="false">
         <div class="form-con">
           <login-form @on-success-valid="handleSubmit"></login-form>
-          <p class="login-tip">输入任意用户名和密码即可</p>
+        </div>
+        <div class="form-co11n">
+           <logi1n-form @on-success-valid="handleReg"></logi1n-form>
         </div>
       </Card>
     </div>
@@ -35,8 +37,14 @@ export default {
           })
         })
       })
-    }
-  }
+    },
+    handleReg () {
+          this.$router.push({
+            name: this.$config.homeName
+          })
+
+    },
+}
 }
 </script>
 

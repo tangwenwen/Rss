@@ -8,7 +8,7 @@ const (
 	//mysql Config
 	MysqlHost     = "127.0.0.1"
 	MysqlPort     = 3306
-	MysqlDBName   = "RSs"
+	MysqlDBName   = "movierss"
 	MysqlUserName = "root"
 	MysqlPassword = "123456"
 )

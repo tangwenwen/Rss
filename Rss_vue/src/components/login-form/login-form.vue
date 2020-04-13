@@ -17,9 +17,9 @@
     <FormItem>
       <Button @click="handleSubmit" type="primary" long>登录</Button>
     </FormItem>
-    <FormItem>
-      <Button @click="handleReg" type="primary" long>注册</Button>
-    </FormItem>
+
+
+
   </Form>
 </template>
 <script>

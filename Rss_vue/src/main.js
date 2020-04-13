@@ -15,13 +15,22 @@ import '@/assets/icons/iconfont.css'
 import TreeTable from 'tree-table-vue'
 import VOrgTree from 'v-org-tree'
 import 'v-org-tree/dist/v-org-tree.css'
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 // 实际打包时应该不引入mock
 /* eslint-disable */
 // if (process.env.NODE_ENVs !== 'production') require('@/mock')
+Vue.use(ElementUI);
+Vue.use(ViewUI);
 
 Vue.use(iView, {
   i18n: (key, value) => i18n.t(key, value)
 })
+
 Vue.use(TreeTable)
 Vue.use(VOrgTree)
 /**

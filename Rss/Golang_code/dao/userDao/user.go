@@ -16,7 +16,7 @@ func CreateToken(username string, userType int) (string, error) {
 	tokenkey := fmt.Sprintf("%s%d", username, time.Now().Unix())
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := make(jwt.MapClaims)
-	claims["exp"] = time.Now().Add(time.Minute * time.Duration(30)).Unix()
+	claims["exp"] = time.Now().Add(time.Minute * time.Duration(120)).Unix()
 	claims["iat"] = time.Now().Unix()
 	claims["jti"] = tokenkey
 	token.Claims = claims
@@ -83,4 +83,40 @@ func CheckPassword(username, password string) (int, error) {
 			return -1, errors.New("密码不正确")
 		}
 	}
+}
+
+func IncreaseUser(user *usersType.AddUserReq) error {
+	orm, err := db.GetEngine()
+	if err != nil {
+		return err
+	}
+	age,_:=strconv.ParseInt(user.Age,10,64)
+	_, err = orm.InsertOne(&usersType.Users{
+		Username:    user.UserName,
+		Password:    user.Password,
+		Age:         int(age),
+		Occupation:  user.Occupation,
+		Gender:      user.Gender,
+		CreatedTime: time.Now(),
+		Status:      0,
+		UserType:    0,
+	})
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+
+func GetUserIdByUserName(userName string)(int,error){
+	orm, err := db.GetEngine()
+	if err != nil {
+		return 0,err
+	}
+	user :=new(usersType.Users)
+	_,err = orm.Where("user_name = ?",userName).Get(user)
+	if err!=nil{
+		return 0,err
+	}
+	return user.ID,nil
 }

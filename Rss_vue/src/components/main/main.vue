@@ -4,7 +4,7 @@
     <Layout>
       <Header class="header-con">
         <header-bar :collapsed="collapsed" @on-coll-change="handleCollapsedChange">
-          <user :message-unread-count="unreadCount" :user-avatar="userAvatar"/>
+          <user :user-avatar="userAvatar"/>
         </header-bar>
       </Header>
       <Content class="main-content-con">
@@ -13,7 +13,9 @@
             <tags-nav :value="$route" @input="handleClick" :list="tagNavList" @on-close="handleCloseTag"/>
           </div>
           <Content class="content-wrapper">
+            <pagination-item />
             <keep-alive :include="cacheList">
+              
               <router-view/>
             </keep-alive>
             <ABackTop :height="100" :bottom="80" :right="50" container=".content-wrapper"></ABackTop>
@@ -22,12 +24,13 @@
       </Content>
     </Layout>
   </Layout>
+
 </template>
 <script>
-import SideMenu from './components/side-menu'
 import HeaderBar from './components/header-bar'
 import TagsNav from './components/tags-nav'
 import User from './components/user'
+import PaginationItem from './components/pagination-item'
 import ABackTop from './components/a-back-top'
 import Fullscreen from './components/fullscreen'
 import Language from './components/language'
@@ -39,7 +42,7 @@ import './main.less'
 export default {
   name: 'Main',
   components: {
-    SideMenu,
+    PaginationItem,
     HeaderBar,
     Language,
     TagsNav,
@@ -51,8 +54,6 @@ export default {
   data () {
     return {
       collapsed: false,
-      minLogo,
-      maxLogo,
       isFullscreen: false
     }
   },
@@ -94,7 +95,8 @@ export default {
     ]),
     ...mapActions([
       'handleLogin',
-      'getUnreadMessageCount'
+      'getUnreadMessageCount',
+      'getUserInfo'
     ]),
     turnToPage (route) {
       let { name, params, query } = {}
@@ -164,8 +166,8 @@ export default {
         name: this.$config.homeName
       })
     }
-    // // 获取未读消息条数
-    // this.getUnreadMessageCount()
+    this.getUserInfo()
   }
 }
+
 </script>

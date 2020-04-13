@@ -2,75 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e54ebd4-59fe-45e7-a13a-9c349566741e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Golang_code/rpc/recommed_rpc.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommed_rpc.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/common/envConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/common/envConfig.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/config/RouterConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/config/RouterConfig.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/dao/userDao/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/dao/userDao/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/handle/userHandle/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/handle/userHandle/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Golang_code/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/models/userModel/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/models/userModel/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/rpc/hello.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/rpc/hello.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Golang_code/types/users/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../Golang_code/types/users/response.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/cf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_pb2_grpc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/api/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/api/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/api/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/assets/images/login-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/components/login-form/login-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/components/login-form/login-form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/components/main/components/header-bar/header-bar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/components/main/components/header-bar/header-bar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/components/main/components/user/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/components/main/components/user/user.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/components/main/main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/components/main/main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/libs/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/libs/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/mock/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/mock/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/router/routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/router/routers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/store/module/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/store/module/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/argu-page/params.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/argu-page/query.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/count-to/count-to.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/cropper/cropper.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/drag-drawer/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/drag-list/drag-list.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/editor/editor.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/icons/icons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/markdown/markdown.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/org-tree/components/org-view.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/org-tree/components/zoom-controller.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/org-tree/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/org-tree/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/split-pane/split-pane.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/tables/tables.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/tree-select/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/components/tree-table/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/directive/directive.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/error-store/error-store.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/excel/common.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/excel/export-excel.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/excel/upload-excel.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/i18n/i18n-page.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/view/login/login.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/src/view/login/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/multilevel/level-2-1.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/multilevel/level-2-2/level-2-2-1.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/multilevel/level-2-2/level-2-2-2.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/multilevel/level-2-3.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/single-page/error-logger.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/single-page/home/example.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/single-page/home/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/single-page/home/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/single-page/message/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/tools-methods/tools-methods.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/update/update-paste.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/src/view/update/update-table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rss_vue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Rss_vue/vue.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Python_code$user_cf.coverage" NAME="user_cf Coverage Results" MODIFIED="1586404946632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python_code$cf.coverage" NAME="cf Coverage Results" MODIFIED="1586413035476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_code$cf.coverage" NAME="cf Coverage Results" MODIFIED="1586497403478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_code$main.coverage" NAME="main Coverage Results" MODIFIED="1585809312830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -88,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="703">
               <caret line="38" column="30" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="30" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -97,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="195">
+              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -112,17 +45,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/ProgramData/Anaconda3/Lib/site-packages/grpc/_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="7144">
               <caret line="388" selection-start-line="388" selection-end-line="388" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_cf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="175" column="24" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="24" />
+            <state relative-caret-position="3230">
+              <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -142,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommed_rpc.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="380">
               <caret line="20" column="16" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
@@ -184,10 +117,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="949" />
     <option name="width" value="977" />
-    <option name="height" value="1042" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -324,23 +257,25 @@
       <workItem from="1585822063281" duration="5811000" />
       <workItem from="1585876302907" duration="2140000" />
       <workItem from="1586319026596" duration="10668000" />
-      <workItem from="1586408307428" duration="5540000" />
+      <workItem from="1586408307428" duration="6199000" />
+      <workItem from="1586494775889" duration="1237000" />
+      <workItem from="1586573249269" duration="584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31835000" />
+    <option name="totallyTimeSpent" value="34315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="831" y="0" width="852" height="909" extended-state="0" />
+    <frame x="829" y="0" width="852" height="910" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20707071" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21717171" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32950193" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38838708" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.68" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -371,13 +306,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hello_pb2_grpc.py" />
     <entry file="file://$PROJECT_DIR$/hello_pb2.py" />
-    <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommed_rpc_pb2_grpc.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -390,7 +318,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
+        <state relative-caret-position="703">
           <caret line="38" column="30" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="30" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -400,34 +328,41 @@
     </entry>
     <entry file="file://E:/ProgramData/Anaconda3/Lib/site-packages/grpc/_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="7144">
           <caret line="388" selection-start-line="388" selection-end-line="388" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_cf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recommed_rpc.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="380">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="195">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_cf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="175" column="24" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

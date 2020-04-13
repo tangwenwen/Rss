@@ -11,6 +11,22 @@ export const login = ({ userName, password }) => {
     method: 'post'
   })
 }
+export const addUser = ({ userName, passWord,age,gender,occupation }) => {
+  const data = {
+    userName,
+    passWord,
+    age,
+    gender,
+    occupation
+  }
+  return axios.request({
+    url: '/users/addUser',
+    data,
+    method: 'post'
+  })
+}
+
+
 
 export const getUserInfo = (token) => {
   return axios.request({
@@ -22,10 +38,36 @@ export const getUserInfo = (token) => {
   })
 }
 
+
+export const getPageMovie =({ token,pageNo,pageSize }) => {
+  return axios.request({
+    url: 'movie/PageMovie',
+    method: 'get',
+    headers: {'Authorization': token},
+    params: {
+      pageNo,
+      pageSize
+    }
+  })
+}
+
+export const movieRate =({ token,movieId,rating }) => {
+  return axios.request({
+    url: 'movie/movieRate',
+    method: 'get',
+    headers: {'Authorization': token},
+    params: {
+      movieId,
+      rating
+    }
+  })
+}
+
 export const logout = (token) => {
   return axios.request({
-    url: 'logout',
-    method: 'post'
+    url: '/users/logout',
+    method: 'get',
+    headers: {'Authorization': token}
   })
 }
 

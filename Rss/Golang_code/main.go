@@ -20,16 +20,26 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(2)
 	go func() {
+		defer func() {
+			if err := recover(); err != nil {
+				logs.Error("http err: ", err)
+			}
+		}()
 		http()
 	}()
 	go func() {
+		defer func() {
+			if err := recover(); err != nil {
+				logs.Error("rpc err: ", err)
+			}
+		}()
 		rpc()
 	}()
 	wg.Wait()
 
 }
 
-func http(){
+func http() {
 	port := flag.String("httpport", "7777", "http listen port")
 	flag.Parse()
 
@@ -47,7 +57,7 @@ func http(){
 		logs.Error(err)
 	}
 }
-func rpc(){
+func rpc() {
 	conn, err := grpc.Dial("127.0.0.1:50051", grpc.WithInsecure())
 	if err != nil {
 		logs.Error("did not connect: %v", err)
@@ -56,11 +66,9 @@ func rpc(){
 	c := pb.NewRecommendClient(conn)
 
 	// Contact the server and print out its response.
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*180)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1)
 	defer cancel()
 	r, err := c.Recommend(ctx, &pb.RecommendReq{UserId: 1})
-	if err != nil {
-		logs.Error("could not greet: %v", err)
-	}
+	panic(err)
 	logs.Info("recommendItem: ", r.RecommendItem)
 }

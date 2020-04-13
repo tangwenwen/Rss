@@ -41,7 +41,7 @@ module.exports = {
     proxy: {
       // 匹配代理的url
       '/api': {
-        target: 'http://localhost:7777'
+        target: 'http://127.0.0.1:7777'
       }
     }
   }

@@ -1,21 +1,27 @@
 import {
   login,
   logout,
+  addUser,
   getUserInfo,
   getMessage,
   getContentByMsgId,
   hasRead,
   removeReaded,
   restoreTrash,
-  getUnreadCount
+  getUnreadCount,
+  getPageMovie,
+  movieRate
 } from '@/api/user'
 import { setToken, getToken } from '@/libs/util'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 export default {
   state: {
     userName: '',
     userId: '',
-    avatarImgPath: '',
+    userType:0,
+    avatarImgPath: 'http://127.0.0.1:8081/src/assets/images/touxiang.png',
     token: getToken(),
     access: '',
     hasGetInfo: false,
@@ -44,6 +50,9 @@ export default {
     },
     setHasGetInfo (state, status) {
       state.hasGetInfo = status
+    },
+    setUserType (state, userType) {
+      state.userType = userType
     },
     setMessageCount (state, count) {
       state.unreadCount = count
@@ -83,10 +92,12 @@ export default {
           password
         }).then(res => {
           const data = eval(res.data)
-          commit('setToken', data.data.token)
-          resolve()
-        }).catch(err => {
-          reject(err)
+          if (res.data.code==0){
+            commit('setToken', data.data.token)
+            resolve(res)
+          }else{
+            resolve(res)
+          }
         })
       })
     },
@@ -100,10 +111,21 @@ export default {
         }).catch(err => {
           reject(err)
         })
-        // 如果你的退出登录无需请求接口，则可以直接使用下面三行代码而无需使用logout调用接口
-        // commit('setToken', '')
-        // commit('setAccess', [])
-        // resolve()
+      })
+    },
+    // 新增用户
+    handleAddUser ({ state, commit },{ userName, passWord,age,gender,occupation }) {
+      return new Promise((resolve, reject) => {
+        addUser({
+          userName,
+          passWord,
+          age,
+          gender,
+          occupation
+        }).then(res => {
+          const data = eval(res.data)
+          resolve(res)
+        })
       })
     },
     // 获取用户相关信息
@@ -111,10 +133,9 @@ export default {
       return new Promise((resolve, reject) => {
         try {
           getUserInfo(state.token).then(res => {
-            const data = res.data
-            commit('setAvatar', data.avatar)
-            commit('setUserName', data.name)
-            commit('setUserId', data.user_id)
+            const data = res.data.data
+            commit('setUserName', data.userName)
+            commit('setUserType', data.user_type)
             commit('setAccess', data.access)
             commit('setHasGetInfo', true)
             resolve(data)
@@ -124,6 +145,34 @@ export default {
         } catch (error) {
           reject(error)
         }
+      })
+    },
+    // 获取电影分页
+    getAllmovie ({ state, commit }, { pageNo, pageSize }) {
+      var token = state.token
+      return new Promise((resolve, reject) => {
+          getPageMovie({
+            token,
+            pageNo,
+            pageSize
+            }).then(res => {
+            const content = eval(res.data)
+            resolve(content)
+          })
+      })
+    },
+    // 评分
+    commitRating ({ state, commit }, { movieId,rating }) {
+      var token = state.token
+      return new Promise((resolve, reject) => {
+          movieRate({
+            token,
+            movieId,
+            rating
+            }).then(res => {
+            const content = eval(res.data)
+            resolve(content)
+          })
       })
     },
     // 此方法用来获取未读消息条数，接口只返回数值，不返回消息列表

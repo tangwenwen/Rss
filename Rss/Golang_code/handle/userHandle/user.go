@@ -3,6 +3,7 @@ package userHandle
 import (
 	"RSs/models/userModel"
 	"RSs/types"
+	usersType "RSs/types/users"
 	"encoding/json"
 	"github.com/emicklei/go-restful"
 	"io/ioutil"
@@ -57,8 +58,6 @@ func (e *User) Logout(req *restful.Request, rsp *restful.Response) {
 	}
 }
 
-
-
 func (e *User) AddUser(req *restful.Request, rsp *restful.Response) {
 
 	defer func() {
@@ -66,14 +65,23 @@ func (e *User) AddUser(req *restful.Request, rsp *restful.Response) {
 			types.RspFailRestData(rsp, e.(error).Error())
 		}
 	}()
-	//err := userModel.Logout(userToken)
-	//if err != nil {
-	//	panic(err)
-	//} else {
-	//	types.RspSucRestData(rsp, "", "ok")
-	//}
+	reqData, err := ioutil.ReadAll(req.Request.Body)
+	if err != nil {
+		panic("addUser")
+	}
+	addUser := new(usersType.AddUserReq)
+	if err := json.Unmarshal(reqData, addUser); err != nil {
+		panic("Login")
+	}
+	err = userModel.AddUser(addUser)
+	if err != nil {
+		rsp.Header().Add("Content-Type", "application/json")
+		types.ResponseFailHttpData(rsp, err.Error())
+	} else {
+		rsp.Header().Add("Content-Type", "application/json")
+		types.ResponseSuccessHttpData(rsp, "ok")
+	}
 }
-
 
 func (e *User) GetInfo(req *restful.Request, rsp *restful.Response) {
 

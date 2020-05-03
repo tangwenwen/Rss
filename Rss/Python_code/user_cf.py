@@ -3,7 +3,7 @@ import random
 import math
 import os
 from operator import itemgetter
-
+from time import *
 from collections import defaultdict
 
 random.seed(0)
@@ -171,8 +171,20 @@ class UserBasedCF(object):
 if __name__ == '__main__':
     ratingfile = os.path.join('./data/ml-1m', 'ratings.dat')
     usercf = UserBasedCF()
+    betime1 = time()
     usercf.generate_dataset(ratingfile)
+    end1time = time()
+    print("11111",end1time-betime1)
+    betime1 = time()
     usercf.calc_user_sim()
+    end1time = time()
+    print("222222",end1time-betime1)
+    betime1 = time()
     a = usercf.recommend("1688")
+    end1time = time()
+    print("333333",end1time-betime1)
     print(a)
-    # usercf.evaluate()
+    betime1 = time()
+    usercf.evaluate()
+    end1time = time()
+    print("4444444",end1time-betime1)

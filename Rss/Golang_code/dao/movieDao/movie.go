@@ -29,12 +29,12 @@ func GetMovieList(limit, offset int) ([]*movieType.MovieList, error) {
 		MList[i].Img = ""
 		MList[i].Genres = AllList[i].Genres
 		MList[i].Title = AllList[i].Title
-		MList[i].Nopa = strconv.Itoa(getNopa(AllList[i].MovieId))
+		MList[i].Nopa = strconv.Itoa(GetNopa(AllList[i].MovieId))
 	}
 	return MList, nil
 }
 
-func getNopa(movieId int) int {
+func GetNopa(movieId int) int {
 	orm, _ := db.GetEngine()
 	count, _ := orm.Count(&movieType.Ratings{MovieId: movieId})
 	return int(count)
@@ -65,4 +65,18 @@ func InsertOnRating(movieId,userId,rating int)error{
 		Status: 0,
 	})
 	return err
+}
+
+func GetMovieById(movieId int)(*movieType.Movie,error){
+	movie:=&movieType.Movie{MovieId:movieId}
+	orm, err := db.GetEngine()
+	if err != nil {
+		return  nil,err
+	}
+	_,err = orm.Get(movie)
+	if err!=nil{
+		return nil,err
+	}
+	return movie,nil
+
 }

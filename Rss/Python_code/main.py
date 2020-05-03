@@ -97,9 +97,9 @@ def initUsers_dat():
 
 def main():
     print("init DB beginning")
-    initMovie_dat()
+    # initMovie_dat()
     initRatings_dat()
-    initUsers_dat()
+    # initUsers_dat()
     print("init DB end")
 
 

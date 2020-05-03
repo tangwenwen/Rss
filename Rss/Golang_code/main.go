@@ -5,37 +5,14 @@ import (
 	"RSs/config"
 	"RSs/plugins/etcd"
 	"RSs/plugins/logs"
-	pb "RSs/rpc"
-	"context"
 	"flag"
 	"fmt"
 	"github.com/micro/go-web"
-	"google.golang.org/grpc"
-	"sync"
-	"time"
 )
 
 func main() {
 
-	var wg sync.WaitGroup
-	wg.Add(2)
-	go func() {
-		defer func() {
-			if err := recover(); err != nil {
-				logs.Error("http err: ", err)
-			}
-		}()
-		http()
-	}()
-	go func() {
-		defer func() {
-			if err := recover(); err != nil {
-				logs.Error("rpc err: ", err)
-			}
-		}()
-		rpc()
-	}()
-	wg.Wait()
+	http()
 
 }
 
@@ -57,18 +34,5 @@ func http() {
 		logs.Error(err)
 	}
 }
-func rpc() {
-	conn, err := grpc.Dial("127.0.0.1:50051", grpc.WithInsecure())
-	if err != nil {
-		logs.Error("did not connect: %v", err)
-	}
-	defer conn.Close()
-	c := pb.NewRecommendClient(conn)
 
-	// Contact the server and print out its response.
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1)
-	defer cancel()
-	r, err := c.Recommend(ctx, &pb.RecommendReq{UserId: 1})
-	panic(err)
-	logs.Info("recommendItem: ", r.RecommendItem)
-}
+

@@ -57,5 +57,7 @@ func movieRouterConf() {
 	methodPath = "movieRate"
 	ws.Route(ws.GET(rootPath + methodPath).To(movie.MovieRate).Filter(auth.TokenFilter))
 
+	methodPath = "recommend"
+	ws.Route(ws.GET(rootPath + methodPath).To(movie.Recommend).Filter(auth.TokenFilter))
 
 }

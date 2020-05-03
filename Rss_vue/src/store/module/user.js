@@ -10,7 +10,8 @@ import {
   restoreTrash,
   getUnreadCount,
   getPageMovie,
-  movieRate
+  movieRate,
+  getRecommend
 } from '@/api/user'
 import { setToken, getToken } from '@/libs/util'
 import Vue from 'vue';
@@ -170,6 +171,15 @@ export default {
             movieId,
             rating
             }).then(res => {
+            const content = eval(res.data)
+            resolve(content)
+          })
+      })
+    },
+      getUserRecommend ({ state, commit }) {
+      var token = state.token
+      return new Promise((resolve, reject) => {
+          getRecommend(token).then(res => {
             const content = eval(res.data)
             resolve(content)
           })

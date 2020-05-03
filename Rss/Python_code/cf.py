@@ -9,23 +9,7 @@ import user_cf
 import os
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
-#
-# class MovieItem():
-#     def __init__(self):
-#         self.__movieId = 0
-#         self.__rating = 0
-#
-#     def get_movieId(self):
-#         return self.__movieId
-#
-#     def get_rating(self):
-#         return self.__rating
-#
-#     def set_movieId(self, m):
-#         self.__movieId = m
-#
-#     def set_rating(self, n):
-#         self.__rating = n
+
 
 class Recommend(recommed_rpc_pb2_grpc.RecommendServicer):
 
@@ -55,9 +39,12 @@ def serve():
     except KeyboardInterrupt:
         server.stop(0)
 
+def initServer():
+    print("endding")
 
 if __name__ == '__main__':
     logging.basicConfig()
+    initServer()
     serve()
 
 

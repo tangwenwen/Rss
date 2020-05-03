@@ -22,18 +22,18 @@ type Pagination struct {
 
 type Movie struct {
 	Id          int    `xorm:"id"`
-	MovieId     int `xorm:"movie_id"`
+	MovieId     int    `xorm:"movie_id"`
 	Title       string `xorm:"title"`
 	Genres      string `xorm:"genres"`
 	CreatedTime string `xorm:"created_time"`
-	Status      int `xorm:"status"`
+	Status      int    `xorm:"status"`
 }
 
 type Ratings struct {
-	Id          int    `xorm:"id"`
-	UserId      int `xorm:"user_id"`
-	MovieId     int `xorm:"movie_id"`
-	Rating      int `xorm:"rating"`
+	Id          int       `xorm:"id"`
+	UserId      int       `xorm:"user_id"`
+	MovieId     int       `xorm:"movie_id"`
+	Rating      int       `xorm:"rating"`
 	CreatedTime time.Time `xorm:"created_time"`
-	Status      int `xorm:"status"`
+	Status      int       `xorm:"status"`
 }

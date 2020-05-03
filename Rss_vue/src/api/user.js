@@ -71,6 +71,14 @@ export const logout = (token) => {
   })
 }
 
+export const getRecommend = (token) => {
+  return axios.request({
+    url: '/movie/recommend',
+    method: 'get',
+    headers: {'Authorization': token}
+  })
+}
+
 
 export const getMessage = () => {
   return axios.request({

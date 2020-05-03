@@ -16,12 +16,11 @@ func CreateToken(username string, userType int) (string, error) {
 	tokenkey := fmt.Sprintf("%s%d", username, time.Now().Unix())
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := make(jwt.MapClaims)
-	claims["exp"] = time.Now().Add(time.Minute * time.Duration(120)).Unix()
-	claims["iat"] = time.Now().Unix()
+	claims["exp"] = time.Now().Add(time.Minute * time.Duration(120)).Unix() //过期时间为2小时
+	claims["iat"] = time.Now().Unix() //签发时间
 	claims["jti"] = tokenkey
 	token.Claims = claims
-
-	tokenString, err := token.SignedString([]byte("hello"))
+	tokenString, err := token.SignedString([]byte("hello")) //指定密钥为hello
 	if err != nil {
 		return "", err
 	}
